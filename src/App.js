@@ -90,7 +90,7 @@ function Board({xIsNext, squares, onPlay, currentMove}) {
 
 function Square({value, onSquareClick}) {
   return (
-    <button className="square" onClick={onSquareClick}>
+    <button className="square" onClick={onSquareClick} winningSquare="false">
       {value}
     </button>
   );
