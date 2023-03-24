@@ -86,7 +86,7 @@ body {
 }
 
 .square[isWinningSquare="true"] {
-  border: 4px solid #E4A0F7;
+  border: 5px solid #9191E9;
 }
 
 .board-row:after {
@@ -98,9 +98,9 @@ body {
 .status {
   margin-bottom: 20px;
   font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
-  font-size: 70px;
+  font-size: 100px;
   text-align: center;
-  color: #E4A0F7;
+  color: #9191E9;
 }
 
 .game {
@@ -117,20 +117,29 @@ body {
 
 li {
   margin-top: 18px;
+  margin-left: 0px;
 }
 
 .jump-button {
   font-size: 30px;
   font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
   border-radius: 10px;
-  border: 1px solid #03FDFC;;
+  border: 1px solid #8EDCE6;;
   background: #444;
   width: 280px;
   text-align: center;
-  color: #03FDFC;
+  color: #8EDCE6;
   margin-top: 0px;
 }
 
 ol {
-  color: #03FDFC;
+  color: #8EDCE6;
+}
+
+#x-button {
+  color: aquamarine;
+}
+
+#o-button[id="o-button"] {
+  color: #FF69B4;
 }

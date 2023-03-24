@@ -67,7 +67,7 @@ function Board({xIsNext, squares, onPlay, currentMove}) {
   } else if (currentMove === 9) {
     status = "Draw";
   } else {
-    status = "Next Player: " + (xIsNext ? "X" : "O");
+    status = "Next: " + (xIsNext ? "X" : "O");
   }
 
    function isWinningSquare(index) {
@@ -100,11 +100,24 @@ function Board({xIsNext, squares, onPlay, currentMove}) {
 }
 
 function Square({value, onSquareClick, checkWinningSquare}) {
-  return (
-    <button className="square" onClick={onSquareClick} isWinningSquare={checkWinningSquare}>
-      {value}
-    </button>
-  );
+  if(value === "X") {
+    return (
+      <button id="x-button" className="square" onClick={onSquareClick} isWinningSquare={checkWinningSquare}>
+        {value}
+      </button>
+    );
+  } else {
+    return (
+      <button id="o-button" className="square" onClick={onSquareClick} isWinningSquare={checkWinningSquare}>
+        {value}
+      </button>
+    );
+  }
+  // return (
+  //   <button className="square" onClick={onSquareClick} isWinningSquare={checkWinningSquare}>
+  //     {value}
+  //   </button>
+  // );
 }
 
 function calculateWinner(squares) {
