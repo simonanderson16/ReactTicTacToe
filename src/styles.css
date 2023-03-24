@@ -70,7 +70,7 @@ body {
 
 .square {
   background: #222;
-  border: 2px solid white;
+  border: 2px solid #777;
   float: left;
   font-size: 175px;
   font-weight: lighter;
@@ -86,7 +86,7 @@ body {
 }
 
 .square[isWinningSquare="true"] {
-  background: white;
+  background: #aaa;
 }
 
 .board-row:after {
