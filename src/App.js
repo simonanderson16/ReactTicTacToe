@@ -19,9 +19,9 @@ export default function Game() {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = "Go to move #" + move;
+      description = "GO TO MOVE #" + move;
     } else {
-      description = "Back to start";
+      description = "BACK TO START";
     }
     return (
       <li key={move}>
@@ -61,13 +61,13 @@ function Board({xIsNext, squares, onPlay, currentMove}) {
   let status;
   let winningSquares = Array(3).fill(null);
   if (winner) {
-    status = "Winner: " + winner;
+    status = "WINNER: " + winner;
     winningSquares = getWinningSquares(squares);
     console.log(winningSquares);
   } else if (currentMove === 9) {
-    status = "Draw";
+    status = "DRAW";
   } else {
-    status = "Next: " + (xIsNext ? "X" : "O");
+    status = "NEXT: " + (xIsNext ? "X" : "O");
   }
 
    function isWinningSquare(index) {
