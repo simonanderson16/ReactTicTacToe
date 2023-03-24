@@ -21,7 +21,7 @@ export default function Game() {
     if (move > 0) {
       description = "Go to move #" + move;
     } else {
-      description = "Go to start";
+      description = "Back to start";
     }
     return (
       <li key={move}>
@@ -76,49 +76,6 @@ function Board({xIsNext, squares, onPlay, currentMove}) {
     }
     return "false";
    }
-
-  //   const lines = [
-  //     [0,1,2],
-  //     [3,4,5],
-  //     [6,7,8],
-  //     [0,3,6],
-  //     [1,4,7],
-  //     [2,5,8],
-  //     [0,4,8],
-  //     [2,4,6]
-  //   ];
-  //   for (let i = 0; i < lines.length; i++) {
-  //     const [a,b,c] = lines[i];
-  //     if (nextSquares[a] && nextSquares[a] === nextSquares[b] && nextSquares[a] === nextSquares[c]) {
-  //       const winningSquares = [a,b,c];
-  //       if (winningSquares.includes(index)) {
-  //         return "true";
-  //       }
-  //     }
-  //   }
-  //   return "false";
-  // }
-
-  //winningSquares = getWinningSquares(squares);
-
-  // function getWinningSquares() {
-  //   const lines = [
-  //         [0,1,2],
-  //         [3,4,5],
-  //         [6,7,8],
-  //         [0,3,6],
-  //         [1,4,7],
-  //         [2,5,8],
-  //         [0,4,8],
-  //         [2,4,6]
-  //       ];
-  //       for (let i = 0; i < lines.length; i++) {
-  //         const [a,b,c] = lines[i];
-  //         if (nextSquares[a] && nextSquares[a] === nextSquares[b] && nextSquares[a] === nextSquares[c]) {
-  //           return [a,b,c];
-  //         }
-  //       }
-  // }
 
   return (
     <div>
