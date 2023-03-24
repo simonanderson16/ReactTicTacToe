@@ -15,7 +15,7 @@ body {
   font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
   margin: 20px;
   padding: 0;
-  background-color: pink;
+  background-color: #222;
   display: table-cell;
   vertical-align: middle;
 }
@@ -69,8 +69,8 @@ body {
 }
 
 .square {
-  background: #fff;
-  border: 3px solid #999;
+  background: #222;
+  border: 2px solid white;
   float: left;
   font-size: 175px;
   font-weight: lighter;
@@ -81,11 +81,12 @@ body {
   padding: 0;
   text-align: center;
   width: 200px;
-  font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;;
+  font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+  color: aquamarine
 }
 
-.square[winningSquare="true"] {
-  background: yellow;
+.square[isWinningSquare="true"] {
+  background: white;
 }
 
 .board-row:after {
@@ -97,8 +98,10 @@ body {
 .status {
   margin-bottom: 10px;
   font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
-  font-size: 75px;
+  font-size: 70px;
   text-align: center;
+  color: #E4A0F7;
+  ;
 
 }
 .game {
@@ -107,5 +110,28 @@ body {
 }
 
 .game-info {
-  margin-left: 20px;
+  margin-left: 100px;
+  font-size: 40px;
+  font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+  margin-top: 35px;
+}
+
+li {
+  padding-bottom: 15px;
+}
+
+.jump-button {
+  font-size: 30px;
+  font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+  border-radius: 10px;
+  border: 1px solid #03FDFC;;
+  background: #444;
+  width: 320px;
+  text-align: center;
+  color: #03FDFC;
+  margin-bottom: 3px;
+}
+
+ol {
+  color: #03FDFC;
 }

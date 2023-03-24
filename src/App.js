@@ -25,7 +25,7 @@ export default function Game() {
     }
     return (
       <li key={move}>
-        <button onClick = {() => jumpTo(move)}>{description}</button>
+        <button className="jump-button" onClick = {() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
@@ -43,11 +43,12 @@ export default function Game() {
 }
 
 function Board({xIsNext, squares, onPlay, currentMove}) {
+  let nextSquares;
   function handleClick(i) {
     if(squares[i] || calculateWinner(squares)) {
       return;
     }
-    const nextSquares = squares.slice();
+    nextSquares = squares.slice();
     if (xIsNext) {
       nextSquares[i] = "X";
     } else {
@@ -66,31 +67,54 @@ function Board({xIsNext, squares, onPlay, currentMove}) {
     status = "Next Player: " + (xIsNext ? "X" : "O");
   }
 
+  function isWinningSquare(index) {
+    const lines = [
+      [0,1,2],
+      [3,4,5],
+      [6,7,8],
+      [0,3,6],
+      [1,4,7],
+      [2,5,8],
+      [0,4,8],
+      [2,4,6]
+    ];
+    for (let i = 0; i < lines.length; i++) {
+      const [a,b,c] = lines[i];
+      if (nextSquares[a] && nextSquares[a] === nextSquares[b] && nextSquares[a] === nextSquares[c]) {
+        const winningSquares = [a,b,c];
+        if (winningSquares.includes(index)) {
+          return "true";
+        }
+      }
+    }
+    return "false";
+  }
+
   return (
     <div>
       <div className="status">{status}</div>
       <div className="board-row">
-        <Square value={squares[0]} onSquareClick={() => handleClick(0)}/>
-        <Square value={squares[1]} onSquareClick={() => handleClick(1)}/>
-        <Square value={squares[2]} onSquareClick={() => handleClick(2)}/>
+        <Square value={squares[0]} onSquareClick={() => handleClick(0)} isWinningSquare={() => isWinningSquare(0)}/>
+        <Square value={squares[1]} onSquareClick={() => handleClick(1)} isWinningSquare={() => isWinningSquare(1)}/>
+        <Square value={squares[2]} onSquareClick={() => handleClick(2)} isWinningSquare={() => isWinningSquare(2)}/>
       </div>
       <div className="board-row">
-        <Square value={squares[3]} onSquareClick={() => handleClick(3)}/>
-        <Square value={squares[4]} onSquareClick={() => handleClick(4)}/>
-        <Square value={squares[5]} onSquareClick={() => handleClick(5)}/>
+        <Square value={squares[3]} onSquareClick={() => handleClick(3)} isWinningSquare={() => isWinningSquare(3)}/>
+        <Square value={squares[4]} onSquareClick={() => handleClick(4)} isWinningSquare={() => isWinningSquare(4)}/>
+        <Square value={squares[5]} onSquareClick={() => handleClick(5)} isWinningSquare={() => isWinningSquare(5)}/>
       </div>
       <div className="board-row">
-        <Square value={squares[6]} onSquareClick={() => handleClick(6)}/>
-        <Square value={squares[7]} onSquareClick={() => handleClick(7)}/>
-        <Square value={squares[8]} onSquareClick={() => handleClick(8)}/>
+        <Square value={squares[6]} onSquareClick={() => handleClick(6)} isWinningSquare={() => isWinningSquare(6)}/>
+        <Square value={squares[7]} onSquareClick={() => handleClick(7)} isWinningSquare={() => isWinningSquare(7)}/>
+        <Square value={squares[8]} onSquareClick={() => handleClick(8)} isWinningSquare={() => isWinningSquare(8)}/>
       </div>
     </div>
   );
 }
 
-function Square({value, onSquareClick}) {
+function Square({value, onSquareClick, isWinningSquare}) {
   return (
-    <button className="square" onClick={onSquareClick} winningSquare="false">
+    <button className="square" onClick={onSquareClick} isWinningSquare={isWinningSquare}>
       {value}
     </button>
   );
