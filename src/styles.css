@@ -86,7 +86,7 @@ body {
 }
 
 .square[isWinningSquare="true"] {
-  border: 5px solid #9191E9;
+  border: 5px solid #FF69B4;
 }
 
 .board-row:after {
@@ -100,7 +100,7 @@ body {
   font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
   font-size: 100px;
   text-align: center;
-  color: #9191E9;
+  color: #FF69B4;
 }
 
 .game {
@@ -112,7 +112,7 @@ body {
   margin-left: 100px;
   font-size: 35px;
   font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 
 li {
@@ -141,5 +141,5 @@ ol {
 }
 
 #o-button[id="o-button"] {
-  color: #FF69B4;
+  color: #9191E9;
 }
