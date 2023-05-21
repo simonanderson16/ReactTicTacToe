@@ -162,10 +162,10 @@ ol {
 
   .status {
     margin-bottom: 20px;
-    margin-left: -20px;
+    margin-left: -5px;
     margin-top: 20px;
     font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
-    font-size: 70px;
+    font-size: 60px;
     text-align: center;
     color: #FF69B4;
   }
