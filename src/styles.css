@@ -143,3 +143,35 @@ ol {
 #o-button[id="o-button"] {
   color: #9191E9;
 }
+
+@media (max-width: 1040px) {
+
+  body {
+    vertical-align: top;
+  }
+  .square {
+    font-size: 100px;
+    line-height: 120px;
+    height: 120px;
+    width: 120px;
+  }
+
+  .game {
+    flex-direction: column;
+  }
+
+  .status {
+    margin-bottom: 20px;
+    margin-left: -20px;
+    margin-top: 20px;
+    font-family: 'Courier New', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, sans-serif;
+    font-size: 70px;
+    text-align: center;
+    color: #FF69B4;
+  }
+
+  ol {
+    margin-left: -70px;
+    margin-top: -50px;
+  }
+}
